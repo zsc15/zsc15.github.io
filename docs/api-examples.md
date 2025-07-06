@@ -51,26 +51,16 @@ Check out the documentation for the [full list of runtime APIs](https://vitepres
 ## Math
 When $a \ne 0$, there are two solutions to $(ax^2 + bx + c = 0)$ and they are
 
-<div class="formula" onclick="toggleLatex('latex1')">
+<div class="formula">
   $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
-  <div class="latex-code" id="latex1" style="display: none;">
+  <div class="latex-code" style="display: none;">
     $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
   </div>
 </div>
 
-<script>
-  function toggleLatex(latexId) {
-      const latexCode = document.getElementById(latexId);
-      if (latexCode.style.display === "none" || latexCode.style.display === "") {
-          latexCode.style.display = "block"; // 显示 LaTeX 代码
-      } else {
-          latexCode.style.display = "none"; // 隐藏 LaTeX 代码
-      }
-  }
-</script>
-
 <style>
 .formula {
+    position: relative; /* 使得子元素可以绝对定位 */
     cursor: pointer;
     margin: 20px 0;
     border: 1px solid #ccc;
@@ -80,11 +70,18 @@ When $a \ne 0$, there are two solutions to $(ax^2 + bx + c = 0)$ and they are
 }
 
 .latex-code {
-    margin-top: 10px;
-    font-family: monospace;
+    position: absolute; /* 绝对定位 */
+    bottom: 100%; /* 在公式上方显示 */
+    left: 0;
     background-color: #f0f0f0;
     border: 1px solid #ddd;
     padding: 10px;
     border-radius: 5px;
+    z-index: 10; /* 确保在其他内容上方 */
+    display: none; /* 初始隐藏 */
+}
+
+.formula:hover .latex-code {
+    display: block; /* 悬停时显示 LaTeX 代码 */
 }
 </style>
