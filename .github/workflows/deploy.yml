@@ -43,8 +43,10 @@ jobs:
         uses: actions/configure-pages@v4
       - name: Install dependencies
         run: npm ci # 或 pnpm install / yarn install / bun install
+      ###两种buid都可以：第一种
       - name: Build with VitePress
         run: npx vitepress build docs  # 使用 npx 运行 VitePress
+      #### 或者第二种：如果你在 package.json 中定义了脚本
       # - name: Build with VitePress
       #   run: npm run docs:build # 或 pnpm docs:build / yarn docs:build / bun run docs:build
       - name: Upload artifact
