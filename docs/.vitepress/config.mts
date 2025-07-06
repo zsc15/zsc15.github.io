@@ -35,6 +35,6 @@ export default defineConfig({
   },
   head: [
     // 引入 CSS 文件
-    ['link', { rel: 'stylesheet', href: '/theme/styles.css' }]
+    ['link', { rel: 'stylesheet', href: '/theme/style.css' }]
   ]
 });
