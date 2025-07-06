@@ -1,0 +1,23 @@
+.latex-hover {
+    position: relative;
+    display: inline-block; /* 使得容器适应内容 */
+  }
+  
+  .latex-hover::after {
+    content: attr(data-latex);
+    position: absolute;
+    bottom: 100%; /* 在公式上方显示 */
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ddd;
+    padding: 5px;
+    border-radius: 5px;
+    z-index: 10; /* 确保在其他内容上方 */
+    white-space: nowrap; /* 保持 LaTeX 格式 */
+    display: none; /* 默认隐藏 */
+    font-size: 12px; /* 根据需要调整字体大小 */
+  }
+  
+  .latex-hover:hover::after {
+    display: block; /* 悬停时显示 */
+  }
