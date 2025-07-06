@@ -1,4 +1,4 @@
-import { defineConfig } from 'vitepress'
+import { defineConfig } from 'vitepress';
 import markdownItLatexHover from './markdown-it-latex-hover'; // 导入自定义插件
 
 // https://vitepress.dev/reference/site-config
@@ -32,5 +32,9 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
     ]
-  }
-})
+  },
+  head: [
+    // 引入 CSS 文件
+    ['link', { rel: 'stylesheet', href: '/theme/styles.css' }]
+  ]
+});
