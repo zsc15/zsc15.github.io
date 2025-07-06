@@ -1,8 +1,8 @@
 <template>
   <div class="latex-container" @mouseenter="showLatex" @mouseleave="hideLatex">
     <slot></slot>
-    <div v-if="visible" class="latex-code">
-      <pre>{{ latex }}</pre>
+    <div v-if="visible" class="latex-code" ref="latexCodeContainer">
+      <pre v-html="latex"></pre>
     </div>
   </div>
 </template>
@@ -23,6 +23,13 @@ export default {
   methods: {
     showLatex() {
       this.visible = true;
+      this.$nextTick(() => {
+        if (window.MathJax) {
+          window.MathJax.typesetPromise([this.$refs.latexCodeContainer]).then(() => {
+            console.log("MathJax typeset complete");
+          });
+        }
+      });
     },
     hideLatex() {
       this.visible = false;
