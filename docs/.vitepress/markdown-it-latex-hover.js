@@ -1,25 +1,28 @@
 export default function markdownItLatexHover(md) {
-    // 保存默认的渲染规则
-    const defaultRenderInline = md.renderer.rules.math_inline || function (tokens, idx, options, env) {
-        return `$$${tokens[idx].content}$$`;
-    };
-
-    const defaultRenderBlock = md.renderer.rules.math_block || function (tokens, idx, options, env) {
-        return `$$${tokens[idx].content}$$`;
-    };
-
-    // 为行内数学公式添加包裹
-    md.renderer.rules.math_inline = function (tokens, idx, options, env) {
-        const token = tokens[idx];
-        const content = token.content; // 获取公式内容,打印内容
-        // console.log(content); // 打印内容
-        return `<span class="latex-hover" data-latex="${content}">${defaultRenderInline(tokens, idx, options, env)}</span>`;
-    };
-
-    // 为块级数学公式添加包裹
-    md.renderer.rules.math_block = function (tokens, idx, options, env) {
-        const token = tokens[idx];
-        const content = token.content; // 获取公式内容
-        return `<div class="latex-hover" data-latex="${content}">${defaultRenderBlock(tokens, idx, options, env)}</div>`;
-    };
-}
+    const dInline = md.renderer.rules.math_inline
+      || ((t,i)=>`$$${t[i].content}$$`)
+    const dBlock = md.renderer.rules.math_block
+      || ((t,i)=>`$$${t[i].content}$$`)
+  
+    const wrap = (html, content) => `
+      <span class="latex-hover" data-latex="${content}"
+        onclick="
+          (e=>{
+            const el=e.currentTarget;
+            navigator.clipboard.writeText(el.dataset.latex);
+            el.dataset.copied='';
+            el.addEventListener('mouseleave',()=>delete el.dataset.copied,{once:true});
+          })(event)">
+        ${html}
+      </span>
+    `
+  
+    md.renderer.rules.math_inline = (t,i,o,e,s) => {
+      const c = t[i].content.replace(/"/g,'&quot;')
+      return wrap(dInline(t,i,o,e,s), c)
+    }
+    md.renderer.rules.math_block = (t,i,o,e,s) => {
+      const c = t[i].content.replace(/"/g,'&quot;')
+      return wrap(dBlock(t,i,o,e,s), c)
+    }
+  }
