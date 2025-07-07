@@ -29,7 +29,7 @@ export default defineConfig({
         text: 'Examples',
         items: [
           { text: 'Publications', link: '/markdown-examples' },
-          { text: '数思智算', link: '.vitepress/blog/chuixin' }
+          { text: '数思智算', link: '/.vitepress/blog/chuixin' }
         ]
       }
     ],
