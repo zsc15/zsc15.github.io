@@ -12,7 +12,7 @@ hero:
       link: /markdown-examples
     - theme: alt
       text: 数思智算
-      link: /.vitepress/blog/chuixin
+      link: /blog/chuixin
       ##解决bug，前面加上.vitepress这个目录
       # link: /api-examples
 
