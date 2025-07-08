@@ -21,14 +21,14 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Publications', link: '/markdown-examples' }
+      { text: 'Publications', link: '/pulications' }
     ],
 
     sidebar: [
       {
-        text: 'Examples',
+        text: '目录',
         items: [
-          { text: 'Publications', link: '/markdown-examples' },
+          { text: 'Publications', link: '/pulications' },
           { text: '数思智算', link: '/blog/chuixin' }
         ]
       }

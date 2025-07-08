@@ -9,7 +9,7 @@ hero:
   actions:
     - theme: brand
       text: Publications
-      link: /markdown-examples
+      link: /pulications
     - theme: alt
       text: 数思智算
       link: /blog/chuixin
