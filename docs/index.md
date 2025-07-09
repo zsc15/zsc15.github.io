@@ -12,7 +12,7 @@ hero:
       link: /pulications
     - theme: alt
       text: 数思智算
-      link: /blog/chuixin
+      link: /blog/blog_index
       ##解决bug，前面加上.vitepress这个目录
       # link: /api-examples
 
