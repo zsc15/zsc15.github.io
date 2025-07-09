@@ -12,7 +12,7 @@ const { site, theme, page, frontmatter } = useData()
   <img src="../../figures/tuoyuan_dingzhi.png" alt="图像描述" style="width: 400px; height: auto;" />
 </div>
 
-证法一：设 $P(x_0,y_0)$ 为交点，两切点分别为 $A(x_1,y_1),B(x_2,y_2)$，则得到切线 $PA$ 方程为 $\frac{x_1x}{a^2}+\frac{y_1y}{b^2}=1$，同理另一条切线 $PB$ 方程为 $\frac{x_2x}{a^2}+\frac{y_2y}{b^2}=1$。两切线互相垂直，则法线互相垂直，即
+**证法一**：设 $P(x_0,y_0)$ 为交点，两切点分别为 $A(x_1,y_1),B(x_2,y_2)$，则得到切线 $PA$ 方程为 $\frac{x_1x}{a^2}+\frac{y_1y}{b^2}=1$，同理另一条切线 $PB$ 方程为 $\frac{x_2x}{a^2}+\frac{y_2y}{b^2}=1$。两切线互相垂直，则法线互相垂直，即
 $$
         \label{eq:perpendicular}
         \frac{x_1x_2}{a^4}+\frac{y_1y_2}{b^4}=0.
@@ -135,6 +135,59 @@ $$
 $$
 d_1 d_2 = \frac{a^2b^2}{a^2+b^2}.
 $$
+
+
+**证法二**：三角函数方法。设 $A(a\cos \alpha,b\sin \alpha ),B(a\cos \alpha ,b\sin \alpha )$，则由过 $A,B$ 两点的切线方程  
+$$
+\begin{equation}
+    \begin{cases}
+        bx\cos \alpha +ay\sin \alpha =ab\\
+        bx\cos \beta +ay\sin \beta =ab
+    \end{cases} \implies
+    \begin{cases}
+        x_P =\frac{a(\sin \alpha -\sin \beta)}{\sin(\alpha -\beta)} \\
+        y_P =-\frac{b(\cos \alpha -\cos \beta)}{\sin(\alpha -\beta)}.
+    \end{cases}
+\end{equation}
+$$
+由于 $PA\perp PB \implies \sin \alpha \sin \beta = -\frac{b^2}{a^2} \cos \alpha \cos \beta$。因此  
+$$
+\begin{aligned}
+    \cos( \alpha -\beta ) & = \cos \alpha \cos \beta +\sin \alpha \sin \beta =\left(1-\frac{b^2}{a^2}\right)\cos \alpha \cos \beta,\\
+    \cos(\alpha +\beta ) & = \cos \alpha \cos \beta -\sin \alpha \sin \beta =\left(1+\frac{b^2}{a^2}\right)\cos \alpha \cos \beta.
+\end{aligned}
+$$
+
+由 $\frac{y-b\sin \alpha }{x-a\sin \alpha }=\frac{b(\sin \beta -\sin \alpha )}{a(\cos \beta-\cos \alpha )}$ 得到  $AB$ 方程为：  
+$$
+\begin{equation}
+    \label{eq: AB equation}
+    b(\sin \beta -\sin \alpha )x -a(\cos \beta -\cos \alpha )y- ab\sin (\beta -\alpha ) =0.
+\end{equation}
+$$
+因此  
+$$
+\begin{equation*}
+    d_1d_2  = \frac{ab \left| \sin(\beta -\alpha ) \right| \left| b(\sin \beta -\sin \alpha )x_P-a(\cos \beta -\cos \alpha )y_P-ab\sin (\beta -\alpha ) \right|  }{b^2(\sin \beta -\sin \alpha )^2+a^2(\cos \beta -\cos \alpha )^2}.
+\end{equation*}
+$$
+$$
+\begin{aligned}
+    b(\sin \beta -\sin \alpha )x_P-a(\cos \beta -\cos \alpha )y_P-ab\sin (\beta -\alpha ) & = \frac{ab\left(2-\cos(\alpha -\beta)-\sin^2(\alpha -\beta)\right)}{\sin (\alpha -\beta)} \\
+    & =\frac{ab(1-\cos(\alpha -\beta))^2}{\sin(\alpha -\beta)} \\
+    & =\frac{ab\left(1-\frac{c^2}{a^2}\cos \alpha \cos \beta\right)^2}{\sin(\alpha -\beta)}
+\end{aligned}
+$$
+由于 $\cos^2 \alpha +\cos^2\beta =\frac{2+\cos (2 \alpha )+\cos (2\beta)}{2} =1+\cos(\alpha +\beta)\cos(\alpha -\beta) = (1-\frac{b^4}{a^4})\cos^2 \alpha \cos^2\beta$，因此 带入到分母  
+$$
+\begin{aligned}
+    b^2(\sin \beta -\sin \alpha )^2+a^2(\cos \beta -\cos \alpha )^2 & = 2b^2+c^2(\cos^2 \alpha+\cos^2\beta)-\frac{2(a^2+b^2)c^2}{a^2}\cos \alpha \cos \beta \\
+    & =  (a^2+b^2)\left(1-\frac{c^2}{a^2}\cos \alpha \cos \beta \right)^2
+\end{aligned}
+$$
+故 $d_1d_2 =\frac{a^2b^2}{a^2+b^2}$。
+
+
 
 ## AI 画图
 先贴出所用到的tikz代码
