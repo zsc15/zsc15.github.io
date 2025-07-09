@@ -187,6 +187,33 @@ $$
 $$
 故 $d_1d_2 =\frac{a^2b^2}{a^2+b^2}$。
 
+**证法三**：使用二级结论，证明两垂直切线的交点 $P$ 轨迹为圆 $x^2+y^2 =a^2+b^2$。直线 $Ax+By+C =0 $ 与椭圆 $\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$ 相切的充分必要条件为 $A^2a^2+B^2b^2 =C^2$。因此可以设斜率为 $m$ 是椭圆的二切线合方程为：  
+$$
+\begin{equation*}
+    y = mx\pm \sqrt{a^2m^2+b^2}\iff (x^2-a^2)m^2-2mxy+(y^2-b^2) =0.
+\end{equation*}
+$$    
+由于切线互相垂直，因此 $m_1m_2 =-1 \iff m_1m_2=\frac{y^2-b^2}{x^2-a^2}$，即 $x^2+y^2 =a^2+b^2$。设 $P(\sqrt{a^2+b^2}\cos\theta, \sqrt{a^2+b^2}\sin \theta)$，那么 $AB$ 方程为：  
+$$
+\begin{equation*}
+    b^2\sqrt{a^2+b^2}\cos\theta x+a^2\sqrt{a^2+b^2}\sin \theta y -a^2b^2=0.
+\end{equation*}
+$$
+因此原点到切点弦 $AB$ 的距离为  
+$$
+\begin{equation*}
+    d_1 =\frac{a^2b^2}{\sqrt{(a^2+b^2)(b^4\cos^2\theta+a^4\sin^2\theta)}}.
+\end{equation*} 
+$$ 
+切线交点 $P$ 到切点弦 $AB$ 的距离为  
+$$
+\begin{aligned}
+    d_2 & =\frac{\left| b^2(a^2+b^2)\cos^2\theta+a^2(a^2+b^2)\sin^2\theta-a^2b^2 \right| }{\sqrt{(a^2+b^2)(b^4\cos^2\theta+a^4\sin^2\theta)}} \\
+    & =\frac{b^4\cos^2\theta+a^4\sin^2\theta}{\sqrt{(a^2+b^2)(b^4\cos^2\theta+a^4\sin^2\theta)}} \\
+    & =\sqrt{\frac{b^4\cos^2\theta+a^4\sin^2\theta}{a^2+b^2}}.
+\end{aligned}
+$$ 
+因此 $d_1d_2 =\frac{a^2b^2}{a^2+b^2}$。
 
 
 ## AI 画图
