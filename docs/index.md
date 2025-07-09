@@ -21,7 +21,7 @@ features:
     details: 我思故我在
   - title: AI计算
     details: 当 AI 遇见算术
-  - title: 万物即可编程
+  - title: 万物皆可编程
     details: Code 是描述世界的另一种语言
 ---
 
