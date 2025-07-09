@@ -1,3 +1,8 @@
+<script setup>
+import { useData } from 'vitepress'
+
+const { site, theme, page, frontmatter } = useData()
+</script>
 # 椭圆距离乘积定值
 
 ## 三种证法
