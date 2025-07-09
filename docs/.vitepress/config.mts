@@ -51,8 +51,14 @@ export default defineConfig({
       /* svg area & number */
       .eq-svg{display:inline-block}
       // .eq-number{margin-left:.25em}
-      /* 公式编号右对齐 */
-      .eq-number{
+      /* 公式编号右对齐，罗马字体 */
+    .eq-number,
+    .eq-ref{
+      font-family:"Times New Roman",Times,"Nimbus Roman",serif;
+      font-style:normal;
+    }
+
+    .eq-number{
       position:absolute;
       right:0;
       top:50%;
@@ -137,7 +143,8 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
       collapsed: false,
       items: [
         { text: '平面几何',  link: '/geometry/chuixin' },
-        { text: '解析几何', link: '/jiexi_geometry/tuoyuan_dingzhi' }
+        { text: '解析几何', link: '/jiexi_geometry/tuoyuan_dingzhi' },
+        { text: '分析', link: '/analysis/integral_inequality_optimal_xishu' }
       ]
     }
   ]
@@ -175,6 +182,7 @@ function sidebar_geometry_Reference(): DefaultTheme.SidebarItem[] {
     }
   ]
 }
+
 function sidebar_jiexi_geometry_Reference(): DefaultTheme.SidebarItem[] {
   return [
     {
@@ -207,3 +215,38 @@ function sidebar_jiexi_geometry_Reference(): DefaultTheme.SidebarItem[] {
     }
   ]
 }
+// 分析
+function sidebar_analysis_Reference(): DefaultTheme.SidebarItem[] {
+  return [
+    {
+      text: '分析学',
+      items: [
+        { text: '积分不等式最优系数', link: 'integral_inequality_optimal_xishu'  }
+        // { text: 'frontmatter 配置', link: 'frontmatter-config' },
+        // { text: '运行时 API', link: 'runtime-api' },
+        // { text: 'CLI', link: 'cli' },
+        // {
+        //   text: '默认主题',
+        //   base: '/zh/reference/default-theme-',
+        //   items: [
+        //     { text: '概览', link: 'config' },
+        //     { text: '导航栏', link: 'nav' },
+        //     { text: '侧边栏', link: 'sidebar' },
+        //     { text: '主页', link: 'home-page' },
+        //     { text: '页脚', link: 'footer' },
+        //     { text: '布局', link: 'layout' },
+        //     { text: '徽章', link: 'badge' },
+        //     { text: '团队页', link: 'team-page' },
+        //     { text: '上下页链接', link: 'prev-next-links' },
+        //     { text: '编辑链接', link: 'edit-link' },
+        //     { text: '最后更新时间戳', link: 'last-updated' },
+        //     { text: '搜索', link: 'search' },
+        //     { text: 'Carbon Ads', link: 'carbon-ads' }
+        //   ]
+        // }
+      ]
+    }
+  ]
+}
+
+
