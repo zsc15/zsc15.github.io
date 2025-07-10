@@ -1,5 +1,5 @@
 # 基于 VitePress 的个人主页
-感谢 [VitePress]([链接地址](https://github.com/vuejs/vitepress))
+感谢 [VitePress](https://github.com/vuejs/vitepress)
 
 ## 功能
 1. 支持 LaTex 的语法 `\label,\eqref`，公式能够自动编号，能够引用公式编号，方便数学党
