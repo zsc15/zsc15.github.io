@@ -65,7 +65,18 @@ export default defineConfig({
       transform:translateY(-50%);
       margin-left:.25em;
     }
+      /* 媒体查询，解决公式显示与编号混叠问题 */
+    @media (max-width: 768px) {
+    .eq-container {
+        flex-direction: column; /* 在小屏幕上垂直排列 */
+        align-items: flex-start; /* 左对齐 */
+    }
 
+    .eq-number {
+        margin-top: 0.5em; /* 增加顶部边距 */
+        position: relative; /* 重新定位 */
+        right: auto; /* 取消绝对定位 */
+    }
       /* kill left indent of KaTeX / MathJax display mode inside wrapper */
       .math.equation .katex-display,
       .math.equation .MathJax_Display{
