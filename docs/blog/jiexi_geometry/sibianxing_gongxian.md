@@ -7,7 +7,7 @@
 </div>
 
 **证明**
-设椭圆方程为 \( b^2x^2 + a^2y^2 = a^2b^2 \)，设切点 \( E, F, G, H \) 分别为 \( (a\cos\alpha_i, b\sin \alpha_i), i=1,2,3,4 \)，点 \( M, N \) 分别是 \( AC, BD \) 中点。可以得到 \( E, H \) 处切线方程为
+设椭圆方程为 $b^2x^2 + a^2y^2 = a^2b^2$，设切点 \( E, F, G, H \) 分别为 \( (a\cos\alpha_i, b\sin \alpha_i), i=1,2,3,4 \)，点 \( M, N \) 分别是 \( AC, BD \) 中点。可以得到 \( E, H \) 处切线方程为
 $$
 \begin{equation}
 \begin{cases}
@@ -28,7 +28,7 @@ $$
 $$
 y_A = \frac{b\sin\frac{\alpha _4 + \alpha _1}{2}}{\cos\frac{\alpha_4 - \alpha_1}{2}}.
 $$
-即 \( A\left(\frac{a\cos\frac{\alpha _4+\alpha _1}{2}}{\cos\frac{\alpha_4-\alpha_1}{2}}, \frac{b\sin\frac{\alpha _4+\alpha _1}{2}}{\cos\frac{\alpha_4-\alpha_1}{2}}\right) \)，其余三个点坐标依次求得
+即 $A\left(\frac{a\cos\frac{\alpha _4+\alpha _1}{2}}{\cos\frac{\alpha_4-\alpha_1}{2}}, \frac{b\sin\frac{\alpha _4+\alpha _1}{2}}{\cos\frac{\alpha_4-\alpha_1}{2}}\right)$，其余三个点坐标依次求得
 $$
 \begin{aligned}
    & B\left(\frac{a\cos\frac{\alpha _2+\alpha _1}{2}}{\cos\frac{\alpha_2-\alpha_1}{2}}, \frac{b\sin\frac{\alpha _2+\alpha _1}{2}}{\cos\frac{\alpha_2-\alpha_1}{2}}\right), \\
@@ -45,8 +45,8 @@ $$
             & = \frac{b}{a} \frac{\sum_{i=1}^4\sin\left(\frac{\alpha}{2}-\alpha_i\right)}{\sum_{i=1}^4\cos\left(\frac{\alpha}{2}-\alpha_i\right)},
 \end{aligned}
 $$
-其中 \( \alpha = \alpha_1 + \alpha_2 + \alpha_3 + \alpha_4 \)。同理
+其中 $\alpha = \alpha_1 + \alpha_2 + \alpha_3 + \alpha_4$。同理
 $$
 k_{ON} = \frac{y_B + y_D}{x_B + x_D} = \frac{b}{a} \frac{\sum_{i=1}^4\sin\left(\frac{\alpha}{2}-\alpha_i\right)}{\sum_{i=1}^4\cos\left(\frac{\alpha}{2}-\alpha_i\right)}.
 $$
-因此 \( k_{OM} = k_{ON} \)，即 \( O, M, N \) 共线。
+因此 $k_{OM} = k_{ON}$，即 \( O, M, N \) 共线。

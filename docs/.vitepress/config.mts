@@ -199,7 +199,8 @@ function sidebar_jiexi_geometry_Reference(): DefaultTheme.SidebarItem[] {
     {
       text: '解析几何-AI画图',
       items: [
-        { text: '椭圆乘积定值', link: 'tuoyuan_dingzhi'  }
+        { text: '椭圆乘积定值', link: 'tuoyuan_dingzhi'  },
+        { text: '椭圆外切四边形', link: 'sibianxing_gongxian' }
         // { text: 'frontmatter 配置', link: 'frontmatter-config' },
         // { text: '运行时 API', link: 'runtime-api' },
         // { text: 'CLI', link: 'cli' },
