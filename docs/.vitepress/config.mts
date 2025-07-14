@@ -197,7 +197,7 @@ function sidebar_geometry_Reference(): DefaultTheme.SidebarItem[] {
 function sidebar_jiexi_geometry_Reference(): DefaultTheme.SidebarItem[] {
   return [
     {
-      text: '解析几何-遇见智算',
+      text: '解析几何-AI画图',
       items: [
         { text: '椭圆乘积定值', link: 'tuoyuan_dingzhi'  }
         // { text: 'frontmatter 配置', link: 'frontmatter-config' },
